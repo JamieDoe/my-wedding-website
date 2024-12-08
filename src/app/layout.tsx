@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const loveLace = localFont({
+  src: "./fonts/Lovelace.woff",
+  variable: "--font-lovelace",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const garet = localFont({
+  src: "./fonts/Garet.woff",
+  variable: "--font-garet",
+  weight: "100 900",
+});
+const themysion = localFont({
+  src: "./fonts/Themysion.woff",
+  variable: "--font-themysion",
   weight: "100 900",
 });
 
@@ -26,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${loveLace.variable} ${garet.variable} ${themysion.variable} `}
       >
         {children}
       </body>
